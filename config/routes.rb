@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get  'help' => 'statics#help'
-  resources :statics
+  get	'help' => 'statics#help'
+  get	'signup' =>  'users#new'
 
-  root 'statics#home'
+  root	'statics#home'
   
 end

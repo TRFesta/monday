@@ -4,12 +4,28 @@
     <title> <%= yield(:title) %> Ciabatta </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/flatly/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+      <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Ciabatta", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Help", help_path %></li>
+            <li><%= link_to "Log in", '' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+
+
     <%= yield %>
   </body>
 </html>
